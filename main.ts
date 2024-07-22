@@ -87,6 +87,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, l
     }
 })
 info.onCountdownEnd(function () {
+    game.setGameOverPlayable(false, music.melodyPlayable(music.bigCrash), true)
+    game.setGameOverMessage(true, "thank you for your hard work WWW")
     game.setGameOverScoringType(game.ScoringType.None)
     info.changeLifeBy(-99999999)
 })
@@ -199,6 +201,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, l
     }
 })
 info.onLifeZero(function () {
+    game.setGameOverPlayable(false, music.melodyPlayable(music.bigCrash), true)
+    game.setGameOverMessage(true, "thank you for your hard work WWW")
     game.setGameOverScoringType(game.ScoringType.None)
     game.gameOver(false)
 })
@@ -231,8 +235,6 @@ let mySprite3: Sprite = null
 let myEnemy: Sprite = null
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
-game.setGameOverPlayable(false, music.melodyPlayable(music.bigCrash), true)
-game.setGameOverMessage(true, "thank you for your hard work WWW")
 game.setDialogCursor(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
