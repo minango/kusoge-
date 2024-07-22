@@ -10,7 +10,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.boss, function (sprite, otherSpr
     music.play(music.melodyPlayable(music.siren), music.PlaybackMode.UntilDone)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, location) {
-    mySprite.vy += -10
+    mySprite.vy += -100
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     info.changeLifeBy(-2)
