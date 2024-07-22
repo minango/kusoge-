@@ -15,13 +15,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     info.changeLifeBy(-2)
 })
-scene.onOverlapTile(SpriteKind.Rastboss, assets.tile`myTile14`, function (sprite, location) {
-    game.setGameOverEffect(true, effects.confetti)
-    game.setGameOverPlayable(true, music.melodyPlayable(music.powerUp), false)
-    game.setGameOverMessage(true, "nice")
-    game.setGameOverScoringType(game.ScoringType.None)
-    game.gameOver(true)
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
     if (info.life() <= 10) {
         info.changeLifeBy(-1)
@@ -79,6 +72,13 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, l
         }
         mySprite3.follow(mySprite, 50)
     }
+})
+scene.onOverlapTile(SpriteKind.Rastboss, assets.tile`myTile20`, function (sprite, location) {
+    game.setGameOverEffect(true, effects.confetti)
+    game.setGameOverPlayable(true, music.melodyPlayable(music.powerUp), false)
+    game.setGameOverMessage(true, "nice")
+    game.setGameOverScoringType(game.ScoringType.None)
+    game.gameOver(true)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     mySprite.vy += -25
